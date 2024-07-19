@@ -1,0 +1,133 @@
+body {
+    background-color: #8B0000; /* Arka plan rengini değiştirebilirsiniz */
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 150px;
+  }
+  
+  .table-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 0; /* Başlık etrafında biraz boşluk bırakır */
+    text-align: center;
+  }
+  
+  .table-title:hover {
+    animation: colorchange 2s infinite;
+  }
+  
+  @keyframes colorchange {
+    0% {
+      color: red;
+    }
+    25% {
+      color: blue;
+    }
+    50% {
+      color: green;
+    }
+    75% {
+      color: orange;
+    }
+    100% {
+      color: purple;
+    }
+  }
+  
+  .table-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px; /* İçerik etrafında boşluk oluşturur */
+    width: fit-content; /* İçeriğin genişliğine göre genişler */
+    margin: 0 auto; /* Ortalanmasını sağlar */
+  }
+  
+  .table {
+    width: auto;
+    border-collapse: separate; /* border-collapse özelliğini kaldırıyoruz */
+    border-spacing: 0; /* Hücreler arasındaki boşluğu kaldırıyoruz */
+    border-radius: 10px; /* Tablonun köşe yuvarlamaları */
+    overflow: hidden; /* Taşma sorunlarını önlemek için */
+    table-layout: fixed;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    word-break: break-word; /* Uzun kelimeleri böler */
+    overflow: hidden; /* Taşmayı gizler */
+    text-overflow: ellipsis; /* Uzun metinleri üç nokta ile gösterir */
+    white-space: nowrap; /* Metni tek satırda tutar */
+  }
+  .table th {
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .table {
+      width: 100%; /* Küçük ekranlarda tablonun tam genişlikte olmasını sağlar */
+    }
+    
+    .table-title {
+      font-size: 20px; /* Küçük ekranlarda başlık boyutunu küçültür */
+      margin-bottom: 15px; /* Başlık ve tablo arasındaki boşluğu artırır */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .table th, .table td {
+      font-size: 12px; /* Çok küçük ekranlarda tablo metin boyutunu küçültür */
+      padding: 4px; /* Hücrelerin dolgu alanını azaltır */
+    }
+  
+    .table-title {
+      font-size: 18px; /* Çok küçük ekranlarda başlık boyutunu daha da küçültür */
+      margin-bottom: 10px; /* Başlık ve tablo arasındaki boşluğu azaltır */
+    }
+  }
+  
+  .buttons button {
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .buttons button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  .buttons button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .buttons button:active::before {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  /*Form Kısaltma İşlemlerini Burada Verdik*/
+  .form-container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+  }
+
+  .form-floating {
+    width: 100%;
+  }

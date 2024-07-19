@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="table-container">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th colspan="9" class="table-title">Taşınmazlarınız</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Ada</th>
+          <th>Parsel</th>
+          <th>Nitelik</th>
+          <th>Koordinat</th>
+          <th>Mahalle</th>
+          <th>İlçe</th>
+          <th>Şehir</th>
+          <th>Adres</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>345</td>
+        <td>768 </td>
+        <td>Konut</td>
+        <td>39.1241517</td>
+        <td>Şemikler Mahallesi</td>
+        <td>Karşıyaka</td>
+        <td>İzmir</td>
+        <td>Şemikler Mahallesi, No:12, Karşıyaka/İzmir</td>
+      </tr>
+    </table>
+  </div>
+  <div class="buttons">
+    <button type="button" class="btn btn-primary" (click)="addToEstate()">Taşınmaz Ekle
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill"
+        viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
+      </svg>
+    </button>
+    <button type="button" class="btn btn-danger" (click)="deleteToEstate()">Sil
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash"
+        viewBox="0 0 16 16">
+        <path
+          d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+        <path
+          d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+      </svg>
+    </button>
+    <button type="button" class="btn btn-success" (click)="updateToEstate()">Güncelle
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bootstrap-reboot" viewBox="0 0 16 16">
+        <path d="M1.161 8a6.84 6.84 0 1 0 6.842-6.84.58.58 0 1 1 0-1.16 8 8 0 1 1-6.556 3.412l-.663-.577a.58.58 0 0 1 .227-.997l2.52-.69a.58.58 0 0 1 .728.633l-.332 2.592a.58.58 0 0 1-.956.364l-.643-.56A6.8 6.8 0 0 0 1.16 8z"/>
+        <path d="M6.641 11.671V8.843h1.57l1.498 2.828h1.314L9.377 8.665c.897-.3 1.427-1.106 1.427-2.1 0-1.37-.943-2.246-2.456-2.246H5.5v7.352zm0-3.75V5.277h1.57c.881 0 1.416.499 1.416 1.32 0 .84-.504 1.324-1.386 1.324z"/>
+      </svg>
+    </button>
+
+    <button type="button" class="btn btn-info">Excel
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-file-earmark-excel" viewBox="0 0 16 16">
+        <path
+          d="M5.884 6.68a.5.5 0 1 0-.768.64L7.349 10l-2.233 2.68a.5.5 0 0 0 .768.64L8 10.781l2.116 2.54a.5.5 0 0 0 .768-.641L8.651 10l2.233-2.68a.5.5 0 0 0-.768-.64L8 9.219l-2.116-2.54z" />
+        <path
+          d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+
