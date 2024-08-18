@@ -3,6 +3,8 @@
 @import "~font-awesome/css/font-awesome.min.css";
 @import "~alertifyjs/build/css/alertify.min.css";
 @import "~alertifyjs/build/css/themes/bootstrap.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 
 
 body {
@@ -10,3 +12,5 @@ body {
     height: 150vh;
     overflow-y: scroll;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

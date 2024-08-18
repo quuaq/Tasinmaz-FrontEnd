@@ -1,0 +1,57 @@
+<h1 mat-dialog-title>{{ inputdata.title }}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="form" (ngSubmit)="Saveuser()">
+    <div id="map" class="map"></div>
+    <mat-form-field>
+      <mat-label>Koordinat</mat-label>
+      <input matInput placeholder="Koordinat" formControlName="koordinat" readonly>
+      <mat-error *ngIf="form.controls['koordinat'].hasError('required')">Koordinat Gerekli</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>İl</mat-label>
+      <mat-select placeholder="İl" formControlName="il">
+        <mat-option *ngFor="let il of ilOptions" [value]="il.sehir_id">{{ il.sehir_ad }}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.controls['il'].hasError('required')">İl Gerekli</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>İlçe</mat-label>
+      <mat-select placeholder="İlçe" formControlName="ilce">
+        <mat-option *ngFor="let ilce of filteredIlceOptions" [value]="ilce.ilce_id">{{ ilce.ilce_ad }}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.controls['ilce'].hasError('required')">İlçe Gerekli</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Mahalle</mat-label>
+      <mat-select placeholder="Mahalle" formControlName="mahalle">
+        <mat-option *ngFor="let mahalle of filteredMahalleOptions" [value]="mahalle.mahalle_id">{{ mahalle.mahalle_ad }}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.controls['mahalle'].hasError('required')">Mahalle Gerekli</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Ada</mat-label>
+      <input matInput placeholder="Ada" formControlName="ada">
+      <mat-error *ngIf="form.controls['ada'].hasError('required')">Ada Gerekli</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Parsel</mat-label>
+      <input matInput placeholder="Parsel" formControlName="parsel">
+      <mat-error *ngIf="form.controls['parsel'].hasError('required')">Parsel Gerekli</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Nitelik</mat-label>
+      <input matInput placeholder="Nitelik" formControlName="nitelik">
+      <mat-error *ngIf="form.controls['nitelik'].hasError('required')">Nitelik Gerekli</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Adres</mat-label>
+      <input matInput placeholder="Adres" formControlName="adres">
+      <mat-error *ngIf="form.controls['adres'].hasError('required')">Adres Gerekli</mat-error>
+    </mat-form-field>
+    
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="Saveuser()" [disabled]="form.invalid">Kaydet</button>
+  <button mat-raised-button color="warn" (click)="closepopup()">Kapat</button>
+</div>

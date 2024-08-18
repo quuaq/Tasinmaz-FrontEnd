@@ -1,0 +1,23 @@
+<!-- src/app/kullanici-add/kullanici-add.component.html -->
+<h2>Kullanıcı Ekle</h2>
+<form [formGroup]="form">
+  <mat-form-field>
+    <mat-label>Kullanıcı Adı</mat-label>
+    <input matInput formControlName="kullanici_name" type="kullanici_name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Şifre</mat-label>
+    <input matInput formControlName="password" type="password">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Rol</mat-label>
+    <input matInput formControlName="role">
+  </mat-form-field>
+
+  <div class="button-group">
+    <button mat-button (click)="onCancel()">İptal</button>
+    <button mat-button color="primary" (click)="onSave()">Kaydet</button>
+  </div>
+</form>

@@ -1,0 +1,62 @@
+/* nav.component.css */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  margin-top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 300px); /* Yüksekliği ekranın yüksekliğine göre ayarlar, üst ve alt boşluk toplamı 300px */
+}
+
+.card {
+  width: 100%;
+  max-width: 400px; /* İsteğe bağlı olarak maksimum genişlik */
+  height: 400px; /* Kare şekli için sabit yükseklik */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar-nav .nav-item button {
+  font-size: 18px; /* İstediğiniz yazı boyutunu buraya ayarlayabilirsiniz */
+}
+
+.custom-navbar {
+  border-radius: 30px; /* İstediğiniz border radius değerini buraya ayarlayabilirsiniz */
+  overflow: hidden; /* Taşan içeriği gizlemek için */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opsiyonel: Gölge eklemek için */
+}
+
+.navbar-logo {
+  height: 30px; /* Logonun yüksekliğini ayarlayabilirsiniz */
+  width: auto; /* Orantılı genişlik */
+  max-width: 150px; /* İsteğe bağlı olarak maksimum genişlik */
+}

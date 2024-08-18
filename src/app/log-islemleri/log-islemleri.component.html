@@ -1,0 +1,35 @@
+<app-nav></app-nav>
+<div class="container">
+  <h2>Log İşlemleri</h2>
+  <div class="table-container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Log ID</th>
+          <th>Durum</th>
+          <th>İşlem Tipi</th>
+          <th>Açıklama</th>
+          <th>Tarih</th>
+          <th>Log IP</th>
+          <th>Kullanıcı ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let log of pagedLogs">
+          <td>{{ log.log_id }}</td>
+          <td>{{ log.durum ? 'Başarılı' : 'Başarısız' }}</td>
+          <td>{{ log.islem_tipi }}</td>
+          <td>{{ log.aciklama }}</td>
+          <td>{{ log.tarih | date: 'short' }}</td>
+          <td>{{ log.log_ip }}</td>
+          <td>{{ log.kullanici_id }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pagination">
+      <button (click)="previousPage()" [disabled]="currentPage === 0">Önceki</button>
+      <span>Sayfa {{ currentPage + 1 }} / {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages - 1">Sonraki</button>
+    </div>
+  </div>
+</div>

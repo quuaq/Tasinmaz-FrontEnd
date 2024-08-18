@@ -1,0 +1,57 @@
+/* login.component.css */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background-size: cover;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    margin-top: 150px;
+}
+
+.custom-card {
+    width: 100%;
+    max-width: 350px; /* İstediğiniz genişliği buraya ayarlayabilirsiniz */
+}
+
+.login-button {
+    margin-top: 20px; /* Giriş butonunun üst boşluğunu artırır */
+}
+
+/* Custom header styling */
+.custom-header {
+    background-color:darkgreen;    /*   Başlık arka plan rengi */
+    color: #ffffff; /* Başlık metin rengi */
+    padding: 10px 15px; /* Başlık iç boşluk */
+    border-radius: 10px 10px 0 0; /* Başlık kenarları yuvarlatma */
+}
+
+.custom-header h3 {
+    font-family: 'Arial', sans-serif; /* Başlık yazı tipi */
+    font-size: 24px; /* Başlık yazı boyutu */
+    font-weight: bold; /* Başlık yazı kalınlığı */
+    text-transform: uppercase; /* Başlık yazı karakterleri büyük */
+}

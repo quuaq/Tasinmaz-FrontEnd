@@ -1,0 +1,30 @@
+<app-nav></app-nav>
+<div class="container">
+  <h2>Kullanıcı Listesi</h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th></th> <!-- Checkbox sütunu için boş bir başlık -->
+          <th>ID</th>
+          <th>Kullanıcı Adı</th>
+          <th>Rol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let kullanici of kullanicilar">
+          <td class="align-middle">
+            <input type="checkbox" class="select-checkbox" (change)="onSelectUser(kullanici.kullanici_id, $event.target.checked)">
+          </td>
+          <td class="align-middle">{{ kullanici.kullanici_id }}</td>
+          <td class="align-middle">{{ kullanici.kullanici_name }}</td>
+          <td class="align-middle">{{ kullanici.role }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="button-container">
+    <button (click)="addUser()" class="btn btn-primary">Kullanıcı Ekle</button>
+    <button (click)="deleteSelectedUsers()" class="btn btn-danger">Seçili Kullanıcıları Sil</button>
+  </div>
+</div>

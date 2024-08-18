@@ -1,6 +1,5 @@
-<div class="container">
+<!-- <div class="container">
   <div class="table-container">
-
     <table class="table">
       <thead>
         <tr>
@@ -18,26 +17,28 @@
           <th>Adres</th>
         </tr>
       </thead>
-      <tr>
-        <td>1</td>
-        <td>345</td>
-        <td>768 </td>
-        <td>Konut</td>
-        <td>39.1241517</td>
-        <td>Şemikler Mahallesi</td>
-        <td>Karşıyaka</td>
-        <td>İzmir</td>
-        <td>Şemikler Mahallesi, No:12, Karşıyaka/İzmir</td>
-      </tr>
+      <tbody>
+        <tr *ngFor="let tasinmaz of tasinmazlar">
+          <td>{{ tasinmaz.tasinmaz_id }}</td>
+          <td>{{ tasinmaz.ada }}</td>
+          <td>{{ tasinmaz.parsel }}</td>
+          <td>{{ tasinmaz.nitelik }}</td>
+          <td>{{ tasinmaz.koordinat }}</td>
+          <td>{{ tasinmaz.mahalle.mahalle_ad }}</td>
+          <td>{{ tasinmaz.mahalle.ilce.ilce_ad }}</td>
+          <td>{{ tasinmaz.mahalle.ilce.sehir.sehir_ad }}</td>
+          <td>{{ tasinmaz.adres }}</td>
+        </tr>
+      </tbody>
     </table>
   </div>
   <div class="buttons">
-    <button type="button" class="btn btn-primary" (click)="addToEstate()">Taşınmaz Ekle
+    <button mat-riased-button class="btn btn-primary" (click)="Openpopup()">Taşınmaz Ekle
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill"
-        viewBox="0 0 16 16">
-        <path
-          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
-      </svg>
+      viewBox="0 0 16 16">
+      <path
+        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
+    </svg>
     </button>
     <button type="button" class="btn btn-danger" (click)="deleteToEstate()">Sil
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash"
@@ -49,12 +50,14 @@
       </svg>
     </button>
     <button type="button" class="btn btn-success" (click)="updateToEstate()">Güncelle
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bootstrap-reboot" viewBox="0 0 16 16">
-        <path d="M1.161 8a6.84 6.84 0 1 0 6.842-6.84.58.58 0 1 1 0-1.16 8 8 0 1 1-6.556 3.412l-.663-.577a.58.58 0 0 1 .227-.997l2.52-.69a.58.58 0 0 1 .728.633l-.332 2.592a.58.58 0 0 1-.956.364l-.643-.56A6.8 6.8 0 0 0 1.16 8z"/>
-        <path d="M6.641 11.671V8.843h1.57l1.498 2.828h1.314L9.377 8.665c.897-.3 1.427-1.106 1.427-2.1 0-1.37-.943-2.246-2.456-2.246H5.5v7.352zm0-3.75V5.277h1.57c.881 0 1.416.499 1.416 1.32 0 .84-.504 1.324-1.386 1.324z"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bootstrap-reboot"
+        viewBox="0 0 16 16">
+        <path
+          d="M1.161 8a6.84 6.84 0 1 0 6.842-6.84.58.58 0 1 1 0-1.16 8 8 0 1 1-6.556 3.412l-.663-.577a.58.58 0 0 1 .227-.997l2.52-.69a.58.58 0 0 1 .728.633l-.332 2.592a.58.58 0 0 1-.956.364l-.643-.56A6.8 6.8 0 0 0 1.16 8z" />
+        <path
+          d="M6.641 11.671V8.843h1.57l1.498 2.828h1.314L9.377 8.665c.897-.3 1.427-1.106 1.427-2.1 0-1.37-.943-2.246-2.456-2.246H5.5v7.352zm0-3.75V5.277h1.57c.881 0 1.416.499 1.416 1.32 0 .84-.504 1.324-1.386 1.324z" />
       </svg>
     </button>
-
     <button type="button" class="btn btn-info">Excel
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-earmark-excel" viewBox="0 0 16 16">
@@ -64,6 +67,131 @@
           d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
       </svg>
     </button>
+  </div>
+</div>
+ -->
+<!--BURASI GÜNCELLE VE SİLİN TAŞINMAZIN YANINA GELDİĞİ YENİ HTML KODLARI-->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <app-map></app-map>
+    </div>
+    <div class="col-12">
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="10" class="table-title">Taşınmazlarınız</th>
+            </tr>
+            <tr>
+              <th>ID</th>
+              <th>Ada</th>
+              <th>Parsel</th>
+              <th>Nitelik</th>
+              <th>Koordinat</th>
+              <th>Mahalle</th>
+              <th>İlçe</th>
+              <th>Şehir</th>
+              <th>Adres</th>
+              <th>İşlemler</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tasinmaz of tasinmazlar">
+              <td>{{ tasinmaz.tasinmaz_id }}</td>
+              <td>{{ tasinmaz.ada }}</td>
+              <td>{{ tasinmaz.parsel }}</td>
+              <td>{{ tasinmaz.nitelik }}</td>
+              <td>{{ tasinmaz.koordinat }}</td>
+              <td>{{ tasinmaz.mahalle.mahalle_ad }}</td>
+              <td>{{ tasinmaz.mahalle.ilce.ilce_ad }}</td>
+              <td>{{ tasinmaz.mahalle.ilce.sehir.sehir_ad }}</td>
+              <td>{{ tasinmaz.adres }}</td>
+              <td>
+                <button style="margin-left: 15px;" mat-raised-button color="primary" (click)="openPopup(tasinmaz)">Güncelle</button>
+                <button mat-raised-button color="warn" (click)="deleteTasinmaz(tasinmaz.tasinmaz_id)">Sil</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="buttons">
+        <button mat-raised-button class="btn btn-primary" color="primary" (click)="Openpopup()">Taşınmaz Ekle
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
+        </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<app-nav></app-nav>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <app-map></app-map>
+    </div>
+    <div class="col-12">
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="10" class="table-title">Taşınmazlarınız</th>
+            </tr>
+            <tr>
+              <th>ID</th>
+              <th>Ada</th>
+              <th>Parsel</th>
+              <th>Nitelik</th>
+              <th>Koordinat</th>
+              <th>Mahalle</th>
+              <th>İlçe</th>
+              <th>Şehir</th>
+              <th>Adres</th>
+              <th>İşlemler</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tasinmaz of tasinmazlar">
+              <td>{{ tasinmaz.tasinmaz_id }}</td>
+              <td>{{ tasinmaz.ada }}</td>
+              <td>{{ tasinmaz.parsel }}</td>
+              <td>{{ tasinmaz.nitelik }}</td>
+              <td>{{ tasinmaz.koordinat }}</td>
+              <td>{{ tasinmaz.mahalle.mahalle_ad }}</td>
+              <td>{{ tasinmaz.mahalle.ilce.ilce_ad }}</td>
+              <td>{{ tasinmaz.mahalle.ilce.sehir.sehir_ad }}</td>
+              <td>{{ tasinmaz.adres }}</td>
+              <td>
+                <button style="margin-left: 15px;" mat-raised-button color="primary" (click)="openPopup(tasinmaz)">Güncelle</button>
+                <button mat-raised-button color="warn" (click)="deleteTasinmaz(tasinmaz.tasinmaz_id)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                    <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
+                  </svg>
+                </button>
+                <button mat-raised-button color="accent" (click)="showOnMap(tasinmaz.koordinat)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-map-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8z"/>
+                    <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"/>
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="buttons">
+        <button mat-raised-button class="btn btn-primary" color="primary" (click)="Openpopup()">Taşınmaz Ekle
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 
