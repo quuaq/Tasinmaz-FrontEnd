@@ -53,6 +53,21 @@ Bu proje, belediye veya kurumlar için taşınmaz yönetimi amacıyla tasarlanm�
 
 ![Ekran Görüntüsü](https://github.com/user-attachments/assets/b5739654-ef2d-453d-86f9-c4fdae4996c5)
 
+## Licence
+
+This project is licensed under the **MIT License**.
+
+The code is free to use, modify, and distribute for personal or commercial purposes.  
+You can incorporate this code into your own projects without restriction, as long as you include the original copyright notice.
+
+For more details, check the [LICENSE](LICENSE) file.
+
+## Contact - İletişim
+- Samet Barış Öncül
+- LinkedIn : https://www.linkedin.com/in/samet-bar%C4%B1%C5%9F-%C3%B6nc%C3%BCl-5186ba270/
+- E-Mail: sbarisoncul35@gmail.com
+
+
 
 
 
