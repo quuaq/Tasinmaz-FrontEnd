@@ -43,3 +43,16 @@ Bu proje, belediye veya kurumlar için taşınmaz yönetimi amacıyla tasarlanm�
 - Harita üzerinden taşınmazın konumu görme 
 
 ---
+
+## Screenshots
+![Ekran Görüntüsü](https://github.com/user-attachments/assets/568287da-ed68-47a6-8b59-43fe29d913bc)
+
+![Ekran Görüntüsü](https://github.com/user-attachments/assets/8c61b8c7-715b-4e1f-ae90-e8d48d88613c)
+
+![Ekran Görüntüsü](https://github.com/user-attachments/assets/9ba006af-8d54-4e1b-be27-0c1ee0d42954)
+
+![Ekran Görüntüsü](https://github.com/user-attachments/assets/b5739654-ef2d-453d-86f9-c4fdae4996c5)
+
+
+
+
