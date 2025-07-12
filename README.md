@@ -9,7 +9,7 @@ Users can list, search, and manage properties; view and update details; and acce
 This project is designed for municipal or enterprise property management use.
 
 ## ✅ Technologies Used
-- Angular (LTS or specify version)
+- Angular 19.2
 - TypeScript
 - Bootstrap / SCSS
 - RESTful API integration
@@ -30,7 +30,7 @@ Kullanıcılar taşınmazları listeleyebilir, arama ve filtreleme yapabilir, de
 Bu proje, belediye veya kurumlar için taşınmaz yönetimi amacıyla tasarlanmıştır.
 
 ## ✅ Kullanılan  Teknolojiler
-- Angular (LTS or specify version)
+- Angular 19.2
 - TypeScript
 - Bootstrap / SCSS
 - RESTful API integration
