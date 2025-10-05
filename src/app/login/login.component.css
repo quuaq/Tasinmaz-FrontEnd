@@ -14,6 +14,21 @@ body, html {
     overflow: hidden;
 }
 
+.login-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/assets/city-bg.jpg'); /* ← Dikkat! Başında / var */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: brightness(0.75);
+  }
+  
+
 #bg-video {
     position: fixed;
     right: 0;
